@@ -1,9 +1,10 @@
-#
+#multi stage builds
 # Build
 #
-FROM debian:10 AS build
+# FROM debian:10 AS build
 
-RUN apt-get update -y && apt-get -y install maven
+# RUN apt-get update -y && apt-get -y install maven
+FROM maven AS build
 
 WORKDIR /opt/shipping
 
